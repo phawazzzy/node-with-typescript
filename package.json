@@ -2,9 +2,12 @@
   "name": "node-with-typescript",
   "version": "1.0.0",
   "description": "\"Understanding and getting my hands dirty with typescript",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc && node --unhandled-rejections=strict ./dist/app.js",
+    "debug": "export DEBUG=* && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc && nodemon --unhandled-rejections=strict ./dist/app.js"
   },
   "keywords": [
     "node",
@@ -15,6 +18,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "debug": "^4.3.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-winston": "^4.1.0",
     "winston": "^3.3.3"
