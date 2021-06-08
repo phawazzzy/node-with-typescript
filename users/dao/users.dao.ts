@@ -69,7 +69,6 @@ class UserDao {
         return currentUser ? currentUser : null
 
     }
-
 }
 
 export default new UserDao();

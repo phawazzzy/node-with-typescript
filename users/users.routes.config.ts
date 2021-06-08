@@ -15,7 +15,7 @@ export class UsersRoutes extends CommonRoutesConfig {
             .post((req: express.Request, res: express.Response) => {
                 res.status(200).json({ user: "new user" });
              });
-        
+    
         this.app.route("/users/:userId")
             .all((req: express.Request, res: express.Response, next: express.NextFunction) => {
 
